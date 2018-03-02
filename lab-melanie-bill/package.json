@@ -1,0 +1,15 @@
+{
+  "name": "lab-melanie-bill",
+  "version": "1.0.0",
+  "description": "lab 35 binary search trees",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --verbose"
+  },
+  "author": "Melanie Downing Bill Odell",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^4.18.2",
+    "jest": "^22.4.2"
+  }
+}
