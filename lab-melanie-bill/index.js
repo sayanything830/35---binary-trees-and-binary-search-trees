@@ -8,6 +8,8 @@ bst.insert(new TreeNode(5));
 bst.insert(new TreeNode(2));
 bst.insert(new TreeNode(8));
 bst.insert(new TreeNode(16));
+bst.insert(new TreeNode(25));
+bst.insert(new TreeNode(50));
 
 // console.log(bst.find(5));
 // console.log(bst.find(16));

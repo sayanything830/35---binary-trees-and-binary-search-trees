@@ -53,7 +53,7 @@ class BST {
   isBalanced(node) {
     let leftHeight, rightHeight;
 
-    if(this.root === null) return true;
+    if(node === null) return true;
 
     leftHeight = this._height(node.left);
     rightHeight = this._height(node.right);
