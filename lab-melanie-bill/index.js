@@ -13,7 +13,7 @@ bst.insert(new TreeNode(50));
 bst.insert(new TreeNode(7));
 
 console.dir(bst, {depth: null});
-bst.remove(8);
+bst.remove(2);
 console.dir(bst, {depth: null});
 // console.log(bst.find(5));
 // console.log(bst.find(16));
