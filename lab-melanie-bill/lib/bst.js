@@ -56,25 +56,29 @@ class BST {
 
   _remove(root, value) {
     if(!root) return null;
-    let removed = this._find(root, value);
+    let removed = this.find(value);
+    console.log('removed',removed);
     let smallest = this._findSmallest(removed);
+    console.log('smallest',smallest);
     let parent = this._findParent(root, value);
+    console.log('parent',parent);
     let left = removed.left;
     let right = removed.right;
-    if (parent.right === value) parent.right = smallest;
-    if (parent.left === value) parent.left = smallest;
+    if (parent.right.value === value) parent.right = smallest;
+    if (parent.left.value === value) parent.left = smallest;
     smallest.left = left;
     smallest.right = right;
   }
 
   _findParent(root, value) {
+    // console.log('findparent',root);
     if (root.left.value === value || root.right.value === value) return root;
     if(root.value < value) return this._findParent(root.right, value);
     return this._findParent(root.left, value);
 
   }
   _findSmallest(node){
-    return node.left ? this._findSmallest(node) : node.value;
+    return node.left ? this._findSmallest(node.left) : node;
   }
 
   isBalanced(node) {
