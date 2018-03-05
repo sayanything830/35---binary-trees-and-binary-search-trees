@@ -12,6 +12,7 @@ bst.insert(new TreeNode(25));
 bst.insert(new TreeNode(50));
 bst.insert(new TreeNode(7));
 
+
 console.dir(bst, {depth: null});
 bst.remove(2);
 console.dir(bst, {depth: null});
