@@ -8,13 +8,18 @@ bst.insert(new TreeNode(5));
 bst.insert(new TreeNode(2));
 bst.insert(new TreeNode(8));
 bst.insert(new TreeNode(16));
-// bst.insert(new TreeNode(25));
-// bst.insert(new TreeNode(50));
+bst.insert(new TreeNode(25));
+bst.insert(new TreeNode(50));
+bst.insert(new TreeNode(7));
 
+
+console.dir(bst, {depth: null});
+bst.remove(2);
+console.dir(bst, {depth: null});
 // console.log(bst.find(5));
 // console.log(bst.find(16));
 // console.log(bst.find(100));
-console.log(bst.isBalanced(bst.find(5)));
+// console.log(bst.isBalanced(bst.find(5)));
 
 
 // let one = new TreeNode(1);
