@@ -15,7 +15,9 @@ class BinaryTree{
 
   inOrderTraversal() {
     if(!this.root) return null;
+    this.inOrderArr = [];
     this._inOrderTraversal(this.root);
+    return this.inOrderArr;
   }
 
   _inOrderTraversal(root) {
@@ -26,13 +28,16 @@ class BinaryTree{
     this._inOrderTraversal(root.left);
     // visit root
     console.log(`Visiting ${root.value}`);
+    this.inOrderArr.push(root.value);
     //visit right
     this._inOrderTraversal(root.right);
   }
 
   preOrderTraversal() {
     if(!this.root) return null;
+    this.preOrderArr = [];
     this._preOrderTraversal(this.root);
+    return this.preOrderArr;
   }
 
   _preOrderTraversal(root) {
@@ -41,6 +46,7 @@ class BinaryTree{
 
     // visit root
     console.log(`Visiting ${root.value}`);
+    this.preOrderArr.push(root.value);
     // visit left
     this._preOrderTraversal(root.left);
     // visit right
@@ -49,7 +55,9 @@ class BinaryTree{
 
   postOrderTraversal() {
     if(!this.root) return null;
+    this.postOrderArr = [];
     this._postOrderTraversal(this.root);
+    return this.postOrderArr;
   }
   _postOrderTraversal(root) {
     // Base case
@@ -61,6 +69,7 @@ class BinaryTree{
     this._postOrderTraversal(root.right);
     // visit root
     console.log(`Visiting ${root.value}`);
+    this.postOrderArr.push(root.value);
   }
 }
 
