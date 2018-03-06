@@ -4,10 +4,15 @@ const {BST, TreeNode} = require('../lib/bst');
 
 describe('Binary Search Tree', function() {
   let bst = new BST();
+  let bst2 = new BST;
   bst.insert(new TreeNode(5));
   bst.insert(new TreeNode(2));
   bst.insert(new TreeNode(8));
   bst.insert(new TreeNode(16));
+  bst2.insert(new TreeNode(5));
+  bst2.insert(new TreeNode(2));
+  bst2.insert(new TreeNode(8));
+  bst2.insert(new TreeNode(16));
   describe('Insert Method', () => {
     it('should have a root node', () => {
       expect(bst.root.value).toEqual(5);
@@ -42,6 +47,19 @@ describe('Binary Search Tree', function() {
     it('should return true if tree is empty', () => {
       let empty = new BST();
       expect(empty.isBalanced({value: null, left: null, right: null})).toBe(true);
+    });
+  });
+  describe('Remove', () => {
+    it('should remove the node and replace it', () => {
+      bst2.remove(8);
+      expect(bst2.root.right.value).toEqual(16);
+    });
+    it('should remove the root node and replace it', () => {
+      bst2.remove(5);
+      expect(bst2.root.value).toEqual(16);
+    });
+    it('should if the value isnt found the node should not be altered', () => {
+      expect(bst2.remove(100)).toEqual(bst2.root);
     });
   });
 });

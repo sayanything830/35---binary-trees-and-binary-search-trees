@@ -4,7 +4,8 @@
   "description": "lab 35 binary search trees",
   "main": "index.js",
   "scripts": {
-    "test": "jest --verbose"
+    "test": "jest --verbose",
+    "lint": "eslint ."
   },
   "author": "Melanie Downing Bill Odell",
   "license": "ISC",
